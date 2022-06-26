@@ -8,7 +8,7 @@ export function Header() {
         <a className={classes.anchor}>Index</a>
       </Link>
       <Link href="/about">
-        <a className={classes.anchor}Ï>About</a>
+        <a className={classes.anchor}>About</a>
       </Link>
     </header>
   );
