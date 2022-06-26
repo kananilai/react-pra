@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { Headline } from "../components/Headline";
 import { Links } from "../components/Links";
 import styles from "../styles/Home.module.css";
