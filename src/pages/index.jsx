@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import Head from "next/head";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Footer } from "src/components/Footer";
 import { Header } from "src/components/Header";
 import { Main } from "src/components/Main";
@@ -9,9 +9,11 @@ import styles from "src/styles/Home.module.css";
 export default function Home() {
   const [count, setCount] = useState(1);
 
-  const handleClick = (e) => {
-    setCount((count) => count + 1);
-  };
+  const handleClick = useCallback(() => {
+    if (count < 10) {
+      setCount((count) => count + 1);
+    }
+  }, [count]);
 
   //HomeComoponentがマウントするときに走る処理
   useEffect(() => {
@@ -20,6 +22,7 @@ export default function Home() {
       document.body.style.backgroundColor = "";
     };
   }, []);
+
   return (
     <div className={styles.container}>
       <Head>
