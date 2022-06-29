@@ -1,38 +1,35 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import Head from "next/head";
-import { useCallback, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Footer } from "src/components/Footer";
 import { Header } from "src/components/Header";
 import { Main } from "src/components/Main";
 import styles from "src/styles/Home.module.css";
 
 export default function Home() {
-  const foo = 1;
-  const handleClick = useCallback((e) => {
-    console.log(e.target.href);
-    e.preventDefault();
-    alert(foo);
-  }, []);
+  const [count, setCount] = useState(1);
+
+  const handleClick = (e) => {
+    setCount((count) => count + 1);
+  };
 
   //HomeComoponentがマウントするときに走る処理
   useEffect(() => {
-    console.log("マウント時");
     document.body.style.backgroundColor = "lightblue";
     return () => {
-      console.log("アンマウント時");
       document.body.style.backgroundColor = "";
     };
   }, []);
-
   return (
     <div className={styles.container}>
       <Head>
         <title>Index Page</title>
       </Head>
       <Header />
-      <a href="/about" onClick={handleClick}>
+      <h1>{count}</h1>
+      <button href="/about" onClick={handleClick}>
         ボタン
-      </a>
+      </button>
       <Main page="index" />
       <Footer />
     </div>
