@@ -5,7 +5,7 @@ import { Main } from "src/components/Main";
 import styles from "src/styles/Home.module.css";
 
 export default function About({
-  count,
+  doubleCount,
   isShow,
   handleClick,
   handleDisplay,
@@ -20,7 +20,7 @@ export default function About({
         <title>About Page</title>
       </Head>
       <Header />
-      {isShow ? <h1>{count}</h1> : null}
+      {isShow ? <h1>{doubleCount}</h1> : null}
       <button href="/about" onClick={handleClick}>
         ボタン
       </button>
