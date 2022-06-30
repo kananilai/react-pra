@@ -16,6 +16,7 @@ export const useBgColor = () => {
       }
     }
   }, [router.pathname]);
+  
   useEffect(() => {
     document.body.style.backgroundColor = bgColor;
     return () => {
