@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import { isLocalURL } from "next/dist/shared/lib/router/router";
+import Link from "next/link";
 import { usePosts } from "src/hooks/usePosts";
 
 export const Posts = () => {
@@ -20,7 +21,13 @@ export const Posts = () => {
   return (
     <ol>
       {data.map((post) => {
-        return <li key={post.id}>{post.title}</li>;
+        return (
+          <li key={post.id}>
+            <Link href={`/post/${post.id}`}>
+              <a>{post.title}</a>
+            </Link>
+          </li>
+        );
       })}
     </ol>
   );
