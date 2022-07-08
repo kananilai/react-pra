@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
-import Head from "next/head";
 import { useRouter } from "next/router";
 import { fetcher } from "src/utils/fetcher";
 import useSWR from "swr";

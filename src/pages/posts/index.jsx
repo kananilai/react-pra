@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
 import Head from "next/head";
 import { Header } from "src/components/Header";
 import { Posts as PostsComponent } from "src/components/Posts";
