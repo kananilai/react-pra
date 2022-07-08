@@ -1,19 +1,19 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import Head from "next/head";
 import { Header } from "src/components/Header";
-import { Posts } from "src/components/Posts";
+import { Posts as PostsComponent } from "src/components/Posts";
 import styles from "src/styles/Home.module.css";
 
-const Home = () => {
+const Posts = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Index Page</title>
+        <title>Posts Page</title>
       </Head>
       <Header />
-      <Posts />
+      <PostsComponent />
     </div>
   );
 };
 
-export default Home;
+export default Posts;

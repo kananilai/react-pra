@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import { Header } from "src/components/Header";
-import { usePost } from "src/hooks/usePost";
 import styles from "src/styles/Home.module.css";
 import { Post } from "src/components/Post";
-const PostId = () => {
+
+const PostsId = () => {
   return (
     <div className={styles.container}>
       <Header />
@@ -12,4 +12,4 @@ const PostId = () => {
   );
 };
 
-export default PostId;
+export default PostsId;
