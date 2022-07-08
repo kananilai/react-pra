@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
-import { isLocalURL } from "next/dist/shared/lib/router/router";
 import Link from "next/link";
 import { usePosts } from "src/hooks/usePosts";
 
