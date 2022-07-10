@@ -1,15 +1,9 @@
 import Link from "next/link";
-import { fetcher } from "src/utils/fetcher";
-import useSWR from "swr";
+import { usePostsbyUserId } from "src/hooks/useFetchArray";
 
-export const PostByPostId = (props) => {
-  const { data, error } = useSWR(
-    props.id
-      ? `https://jsonplaceholder.typicode.com/posts/?userId=${props.id}`
-      : null,
-    fetcher
-  );
-  console.log(data);
+export const PostsByPostId = (props) => {
+  const { data, error } = usePostsbyUserId(props.id);
+
   if (!data && !error) {
     return <div>ローディング中</div>;
   }

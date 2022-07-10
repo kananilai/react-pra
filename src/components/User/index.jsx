@@ -1,4 +1,4 @@
-import { PostByPostId } from "src/components/Post/PostByPostId";
+import { PostsByPostId } from "src/components/Posts/PostsByPostId";
 import { useUser } from "src/hooks/useUser";
 
 export const UserComponent = () => {
@@ -19,7 +19,7 @@ export const UserComponent = () => {
         <li>{data.website}</li>
         <li>{data.company.name}</li>
       </ul>
-      <PostByPostId id={data?.id}/>
+      <PostsByPostId id={data?.id}/>
     </div>
   );
 };
