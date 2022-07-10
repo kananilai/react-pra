@@ -10,21 +10,22 @@ export const UsersComponent = () => {
     return <p>{error.message}(</p>;
   }
   if (isEmpty) {
-    return <p>Empty :</p>;
+    return <p>データが空です</p>;
   }
   return (
-    <ol>
+    <ul className="grid grid-cols-2 gap-6">
       {data.map((user) => {
         return (
           <li key={user.id}>
             <Link href={`/users/${user.id}`}>
-              <a>
-                {user.name} ({user.username})
+              <a className="block p-4 shadow rounded hover:bg-gray-100">
+                <h1 className="text-xl font-bold truncate">{user.name}</h1>
+                <div className="text-lg truncate">{user.email}</div>
               </a>
             </Link>
           </li>
         );
       })}
-    </ol>
+    </ul>
   );
 };
