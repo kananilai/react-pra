@@ -14,6 +14,8 @@ export const CommentsByPostId = (props) => {
   }
 
   return (
+    <div>
+      <h2>コメント</h2>
     <ol>
       {data.map((comment) => {
         return (
@@ -25,5 +27,7 @@ export const CommentsByPostId = (props) => {
         );
       })}
     </ol>
+    </div>
+
   );
 };
