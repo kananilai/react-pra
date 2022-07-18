@@ -12,7 +12,9 @@ export const Header = () => {
       {NAV_ITEMS.map((item) => {
         return (
           <Link key={item.href} href={item.href}>
-            <a className="inline^block py-2 px-6 text-xl hover:text-blue-500 focus:text-blue-500 active:text-blue-500">{item.label}</a>
+            <a className="inline^block py-2 px-6 text-xl hover:text-blue-500 focus:text-blue-500 active:text-blue-500">
+              {item.label}
+            </a>
           </Link>
         );
       })}

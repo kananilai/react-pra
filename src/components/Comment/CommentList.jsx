@@ -1,8 +1,11 @@
 import Link from "next/link";
-import { useComments } from "src/hooks/useFetchArray";
+import { useFetchArray } from "src/hooks/useFetchArray";
+import { API_URL } from "src/utils/const";
 
-export const CommentsComponent = () => {
-  const { data, error, isLoading, isEmpty } = useComments();
+export const CommentList = () => {
+  const { data, error, isLoading, isEmpty } = useFetchArray(
+    `${API_URL}/comments`
+  );
   if (isLoading) {
     return <p>ローディング中</p>;
   }
@@ -18,9 +21,7 @@ export const CommentsComponent = () => {
         return (
           <li key={comment.id} className="border-b pb-2">
             <Link href={`/comments/${comment.id}`} prefetch={false}>
-              <a className="block hover:text-blue-500">
-                {comment.body}
-              </a>
+              <a className="block hover:text-blue-500">{comment.body}</a>
             </Link>
           </li>
         );
