@@ -23,7 +23,6 @@ export default function Home() {
     };
   }, []);
 
-  console.log(count);
   return (
     <div className={styles.container}>
       <Head>
