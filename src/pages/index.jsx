@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import Head from "next/head";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Footer } from "src/components/Footer";
 import { Header } from "src/components/Header";
 import { Main } from "src/components/Main";
@@ -9,13 +9,14 @@ import styles from "src/styles/Home.module.css";
 export default function Home() {
   const [count, setCount] = useState(1);
 
-  const handleClick = (e) => {
-    setCount((count) => count + 1);
-    //👆👇 同意
-    // setCount (function(foo){
-    //   return foo + 1;
-    // })
-  };
+  const handleClick = useCallback((e) => {
+    console.log(count);
+    // if(count <10){
+      //前回の状態を受け取って新しい状態を返す
+      setCount((count) => count + 1);
+    // }
+  },[count]);
+
   useEffect(() => {
     document.body.style.backgroundColor = "lightblue";
     return () => {
