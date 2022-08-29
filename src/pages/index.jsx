@@ -13,10 +13,14 @@ export default function Home() {
   const handleClick = useCallback(
     (e) => {
       console.log(count);
-      setCount((count) => count + 1);
+      setCount((prevCount) => prevCount + 1);
     },
     [count]
   );
+
+  const handleDisplay = useCallback((e) => {
+    setIsShow((prevIsShow) => !prevIsShow);
+  }, []);
 
   useEffect(() => {
     document.body.style.backgroundColor = "lightblue";
