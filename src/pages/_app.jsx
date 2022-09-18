@@ -1,6 +1,6 @@
 import "src/styles/globals.css";
 import Head from "next/head";
-import { useBgLightBlue } from "src/hooks/useBgLightBlue";
+import { useBgColor } from "src/hooks/useBgColor";
 import { useCounter } from "src/hooks/useCounter";
 import { useInputArray } from "src/hooks/useInputArray";
 import { useItmesChange } from "src/hooks/useItemsChange";
@@ -8,7 +8,7 @@ import { useItmesChange } from "src/hooks/useItemsChange";
 function MyApp({ Component, pageProps }) {
   const counter = useCounter();
   const  InputArray= useInputArray();
-  useBgLightBlue();
+  useBgColor();
   const itemsChange = useItmesChange();
   return (
     <>
