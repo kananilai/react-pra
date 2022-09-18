@@ -2,8 +2,7 @@ import { Headline } from "src/components/Headline";
 import { Links } from "src/components/Links";
 import classes from "src/components/Main/Main.module.css";
 
-
-export function Main(props) {
+export const Main = (props) => {
   return (
     <main className={classes.main}>
       <Headline page={props.page}>
@@ -12,4 +11,4 @@ export function Main(props) {
       <Links items={props.items} handleReduce={props.handleReduce} />
     </main>
   );
-}
+};
