@@ -13,6 +13,8 @@ export default function About({
   array,
   handleAdd,
   handleChange,
+  items,
+  handleReduce,
 }) {
   return (
     <div className={styles.container}>
@@ -36,7 +38,7 @@ export default function About({
           ))}
         </ul>
       </div>
-      <Main page="about" />
+      <Main page="about" items={items} handleReduce={handleReduce} />
       <Footer />
     </div>
   );

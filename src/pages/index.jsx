@@ -14,6 +14,8 @@ export default function Home(props) {
     array,
     handleAdd,
     handleChange,
+    items,
+    handleReduce,
   } = props;
 
   return (
@@ -38,7 +40,7 @@ export default function Home(props) {
           ))}
         </ul>
       </div>
-      <Main page="index" />
+      <Main page="index" items={items} handleReduce={handleReduce}/>
       <Footer />
     </div>
   );
