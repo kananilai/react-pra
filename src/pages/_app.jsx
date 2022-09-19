@@ -4,6 +4,7 @@ import { useBgColor } from "src/hooks/useBgColor";
 import { useCounter } from "src/hooks/useCounter";
 import { useInputArray } from "src/hooks/useInputArray";
 import { useItmesChange } from "src/hooks/useItemsChange";
+import { Footer } from "src/components/Footer";
 
 const MyApp = ({ Component, pageProps }) => {
   const counter = useCounter();
@@ -17,6 +18,7 @@ const MyApp = ({ Component, pageProps }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Component {...pageProps} {...counter} {...InputArray} {...itemsChange} />
+      <Footer />
     </>
   );
 };
