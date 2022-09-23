@@ -1,13 +1,5 @@
+import { fetcher } from "src/util/fetcher";
 import useSWR from "swr";
-
-const fetcher = async (url) => {
-  const response = await fetch(url);
-  if (!response.ok) {
-    throw new Error("エラーが発生したため、データを取得できませんでした。");
-  }
-  const json = await response.json();
-  return json;
-};
 
 export const usePosts = () => {
   const { data, error } = useSWR(
