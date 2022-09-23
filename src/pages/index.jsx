@@ -4,7 +4,7 @@ import styles from "src/styles/Home.module.css";
 
 const Index = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.wrapper}>
       <Head>
         <title>Index Page</title>
       </Head>
