@@ -2,7 +2,7 @@ import { Header } from "src/components/Header";
 import { Post } from "src/components/post";
 import styles from "src/styles/Home.module.css";
 
-const PostId = () => {
+const PostsId = () => {
   return (
     <div className={styles.wrapper}>
       <Header />
@@ -10,4 +10,4 @@ const PostId = () => {
     </div>
   );
 };
-export default PostId;
+export default PostsId;
